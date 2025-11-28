@@ -1,12 +1,14 @@
 // frontend/vite.config.js
-export default {
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+
+export default defineConfig({
+  plugins: [react()],
   build: {
     outDir: 'dist',
-    // Ensure proper paths for production
-    assetsDir: 'assets'
+    sourcemap: false
   },
   server: {
-    // Proxy API calls to your backend in development
     proxy: {
       '/api': {
         target: 'http://localhost:5000',
@@ -14,4 +16,4 @@ export default {
       }
     }
   }
-}
+})
