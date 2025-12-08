@@ -22,7 +22,6 @@ function AirplaneModel() {
   return <primitive ref={group} object={scene} scale={window.innerWidth < 768 ? 0.06 : 0.09} />;
 }
 
-useGLTF.preload('/models/scene.gltf');
 
 const FlyingCanvas = ({ flyAway }) => (
   <motion.div
