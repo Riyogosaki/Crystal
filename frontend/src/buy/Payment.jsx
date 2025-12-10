@@ -57,7 +57,7 @@ const Payment = () => {
 
   const fetchOrderHistory = async () => {
     try {
-      const res = await fetch("https://api-roma.onrender.com//api/order/history", {
+      const res = await fetch("https://api-roma.onrender.com/api/order/history", {
         method: "GET",
         credentials: "include",
       });
@@ -70,7 +70,7 @@ const Payment = () => {
 
   const confirmCODOrder = async () => {
     try {
-      const res = await fetch("https://api-roma.onrender.com//api/order/cod", {
+      const res = await fetch("https://api-roma.onrender.com/api/order/cod", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -103,7 +103,7 @@ const Payment = () => {
     if (!amount || amount <= 0) return alert("Invalid amount");
 
     try {
-      const res = await fetch("https://api-roma.onrender.com//api/payment/create-order", {
+      const res = await fetch("https://api-roma.onrender.com/api/payment/create-order", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         credentials: "include",
@@ -124,7 +124,7 @@ const Payment = () => {
         handler: async function (response) {
           const { razorpay_order_id, razorpay_payment_id, razorpay_signature } = response;
 
-          const confirmRes = await fetch("https://api-roma.onrender.com//api/order/confirm", {
+          const confirmRes = await fetch("https://api-roma.onrender.com/api/order/confirm", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             credentials: "include",

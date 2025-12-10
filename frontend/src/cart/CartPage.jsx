@@ -41,7 +41,7 @@ const CartPage = () => {
 
   const fetchCartItems = async () => {
     try {
-      const res = await fetch("https://api-roma.onrender.com//api/cart", {
+      const res = await fetch("https://api-roma.onrender.com/api/cart", {
         method: "GET",
         credentials: "include",
       });

@@ -206,7 +206,7 @@ const ProductCard = ({ product, index }) => {
   };
   const navigate = useNavigate();
     const handleNavigate = () => {
-    navigate(`/product/${product._id}`);
+    navigate(`https://api-roma.onrender.com/product/${product._id}`);
   };
 
   return (

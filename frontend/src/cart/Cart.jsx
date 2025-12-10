@@ -151,7 +151,7 @@ const Cart = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await fetch(`"https://api-roma.onrender.com/api/product/${id}`);
+        const res = await fetch(`https://api-roma.onrender.com/api/product/${id}`);
         const data = await res.json();
         setProduct(data.message);
       } catch (error) {
@@ -163,7 +163,7 @@ const Cart = () => {
 
   const handleAddToCart = async () => {
     try {
-      const response = await fetch(`https://api-roma.onrender.com//api/cart`, {
+      const response = await fetch(`https://api-roma.onrender.com/api/cart`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
