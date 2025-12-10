@@ -22,7 +22,7 @@ const Creating = () => {
   const [showHistory, setShowHistory] = useState(false);
 
   const fetchProducts = async () => {
-    const res = await fetch("/api/product");
+    const res = await fetch("https://api-roma.onrender.com/api/product");
     const data = await res.json();
     setProducts(data.message);
   };
@@ -98,7 +98,7 @@ const Creating = () => {
   const handleDelete = async (id) => {
     if (!window.confirm("Are you sure you want to delete this product?")) return;
     try {
-      const res = await fetch(`/api/product/${id}`, { method: "DELETE" });
+      const res = await fetch(`https://api-roma.onrender.com/api/product/${id}`, { method: "DELETE" });
       const data = await res.json();
       if (data.success) {
         alert("Product deleted successfully");
