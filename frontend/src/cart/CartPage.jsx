@@ -29,6 +29,7 @@ const CartPage = () => {
       const data = await res.json();
 
       if (!res.ok) {
+        alert("First Login");
         navigate("/Login");
         return;
       }
