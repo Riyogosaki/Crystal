@@ -7,13 +7,6 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: false
-  },
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://api-roma.onrender.com',
-        changeOrigin: true
-      }
-    }
   }
+  // No server.proxy needed anymore
 })

@@ -66,7 +66,7 @@ const Creating = () => {
       const leftBase64 = await convertToBase64(leftImage);
       const rightBase64 = await convertToBase64(rightImage);
 
-      const res = await fetch("/api/product", {
+      const res = await fetch("https://api-roma.onrender.com/api/product", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({

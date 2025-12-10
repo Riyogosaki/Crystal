@@ -330,7 +330,7 @@ const Product = () => {
 
   const getting = async () => {
     try {
-      const response = await fetch("/api/product");
+      const response = await fetch("https://api-roma.onrender.com/api/product");
       const data = await response.json();
       setDisplay(data.message || []);
     } catch (error) {

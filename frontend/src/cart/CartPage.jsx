@@ -22,7 +22,7 @@ const CartPage = () => {
 
   const fetchUserProfile = async () => {
     try {
-      const res = await fetch("/api/auth/me", {
+      const res = await fetch("https://api-roma.onrender.com/api/auth/me", {
         method: "GET",
         credentials: "include",
       });
@@ -41,7 +41,7 @@ const CartPage = () => {
 
   const fetchCartItems = async () => {
     try {
-      const res = await fetch("/api/cart", {
+      const res = await fetch("https://api-roma.onrender.com//api/cart", {
         method: "GET",
         credentials: "include",
       });
@@ -59,7 +59,7 @@ const CartPage = () => {
 
   const handleRemove = async (productId) => {
     try {
-      await fetch(`/api/cart/${productId}`, {
+      await fetch(`https://api-roma.onrender.com/api/cart/${productId}`, {
         method: "DELETE",
         credentials: "include",
       });
@@ -75,7 +75,7 @@ const CartPage = () => {
       const newQuantity = item.quantity + amount;
       if (newQuantity < 1) return;
 
-      await fetch(`/api/cart`, {
+      await fetch(`https://api-roma.onrender.com/api/cart`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
